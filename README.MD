@@ -1,34 +1,16 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2868
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+# Cloudflared on UniFi OS
 
-\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
-Cloudflare tunnel architecture\
-\
-Persistent files:\
-/data/cloudflared/cloudflared\
-/data/cloudflared/config.env\
-/data/cloudflared/token\
-/data/cloudflared/repair.sh\
-\
-Features:\
-- Survives UniFi firmware updates\
-- Auto-recreates Cloudflare repository\
-- Auto-recreates GPG key\
-- Auto-updates cloudflared on boot\
-- Auto-rebuilds systemd service\
-- Token-based named tunnels\
-\
-Recovery Process:\
-\pard\pardeftab720\partightenfactor0
-\cf0 \outl0\strokewidth0 \strokec2 bash /data/cloudflared/repair.sh\
-\
-systemctl status cloudflared\
-\
-/data/cloudflared/cloudflared --version\
-\
-}
+Self-healing Cloudflare Tunnel installation for:
+
+- UniFi Dream Router (UDR)
+- UniFi Dream Machine Pro (UDM Pro)
+
+Features:
+
+- Survives UniFi firmware updates
+- Recreates Cloudflare apt repository
+- Recreates Cloudflare GPG key
+- Automatically upgrades cloudflared
+- Rebuilds and restarts systemd service
+- Token-based tunnel authentication
+- Stores persistent binaries under /data/cloudflared
