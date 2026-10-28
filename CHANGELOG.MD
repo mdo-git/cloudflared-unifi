@@ -1,10 +1,8 @@
-2026-10-27
+# Changelog
 
-Updated repair.sh to:
-- always install latest cloudflared
-- validate repository contents
-- stop service before binary replacement
-- log installed version
+## 2026-10-28
 
-Created following Cloudflare security advisory for
-cloudflared < 2026.10.2.
+- Document persistent `cloudflared` installation and manual recovery.
+- Document weekly package update check with a boot delay.
+- Include systemd service and timer units.
+- Add safe configuration template and ignore rules for credentials, binaries, and logs.

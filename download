@@ -1,0 +1,18 @@
+# Tunnel credentials and local configuration
+/token
+config.env
+*.token
+
+# Compiled executable and temporary replacement
+cloudflared
+cloudflared.new
+
+# Runtime logs
+*.log
+repair-*.log
+
+# Archives and temporary exports
+*.tar
+*.tar.gz
+*.zip
+cloudflared-unifi-export/
