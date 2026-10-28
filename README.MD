@@ -10,10 +10,6 @@ This repository documents a persistent `cloudflared` installation on UniFi gatew
 - `systemd/cloudflared-update.service` and `.timer` — run update checks 3 minutes after boot and then every 7 days.
 - `config.env.example` — safe template for the local `config.env`.
 
-## Security
-
-**Never commit the real `/data/cloudflared/token` file.** It contains the tunnel credential. Do not commit runtime logs or the compiled `cloudflared` executable either. Keep the real `config.env` on the router; copy `config.env.example` to `/data/cloudflared/config.env` only if creating a fresh installation and verify values before use.
-
 ## Install/update setup
 
 These instructions assume the scripts have been copied to `/data/cloudflared` and systemd is available. Run commands as root.
