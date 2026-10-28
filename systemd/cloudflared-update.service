@@ -1,0 +1,9 @@
+[Unit]
+Description=Check and update persistent cloudflared binary
+Wants=network-online.target
+After=network-online.target cloudflared.service
+
+[Service]
+Type=oneshot
+ExecStart=/data/cloudflared/update.sh
+TimeoutStartSec=10min
